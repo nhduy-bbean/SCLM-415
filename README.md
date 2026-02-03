@@ -1,8 +1,10 @@
-# SCLM415 – Data Analysis Assignment (Excel)
+# SCLM415 – Data Analysis Assignment For Forecasting Product Units
 
 ## 📌 Project Overview
-This Excel file supports analysis for the **SCLM415 (Supply Chain & Logistics Management)** course.  
-The workbook is designed to transform raw data into meaningful outputs using **conditional aggregation** with `SUMIFS()`—a core Excel function for supply chain reporting and KPI calculation.
+This Excel file is used for analysis in the **SCLM415 (Supply Chain & Logistics Management)** course.  
+The dataset is organized into a single worksheet where raw data, calculations, and analytical logic are combined to support supply chain–related decision making.
+
+The focus of this assignment is to apply **Excel functions**, particularly conditional aggregation, to process data, perform calculations, and generate insights relevant to supply chain management.
 
 ---
 
@@ -16,52 +18,66 @@ The workbook is designed to transform raw data into meaningful outputs using **c
 
 ### Sheet: `Data`
 **Purpose:**  
-This worksheet contains the full workflow in one place:
+This worksheet serves as the central workspace for the assignment. It contains:
 - Raw input data
-- Helper columns (if any)
-- Output tables/metrics calculated using conditional logic
+- Intermediate calculations
+- Final outputs used to support analysis and conclusions
 
-The sheet is structured so that results can be reproduced and traced back to the raw data easily.
+Rather than separating tasks across multiple sheets, all logic is implemented within this single sheet to maintain clarity and traceability.
 
 ---
 
-## 🔧 Key Excel Function Used & Its Purpose
+## 🔧 Excel Functions & Their Purposes
 
-### `SUMIFS()`
-**What it does:**  
-`SUMIFS()` sums values **only when multiple conditions are met**.  
-This is commonly used in supply chain analysis to compute totals by:
-- product / item category
-- supplier
-- warehouse / location
-- time period (month/quarter/year)
-- status (delivered, pending, etc.)
+The following Excel functions are used in the `Data` sheet to support different analytical objectives:
 
-**Why this matters in SCM:**  
-Supply chain datasets are usually large and grouped by multiple dimensions. `SUMIFS()` allows fast KPI reporting without manual filtering.
+### 1. `SUMIFS()`
+**Purpose:**  
+- Aggregate numerical values **based on one or multiple conditions**.
 
-**Typical use cases in this file:**
-- Sum total quantity by item and month
-- Sum total cost by supplier and category
-- Sum shipment volume by region and time period
-- Sum values by status (e.g., completed vs. not completed)
+**Usage context:**  
+Used to calculate totals such as quantities, costs, or volumes by applying specific criteria (e.g., item type, supplier, time period, or status), which is common in supply chain analysis.
 
-**Example formula pattern:**
-SUMIFS(sum_range, criteria_range1, criteria1, criteria_range2, criteria2, ...)
+---
+
+### 2. `AVERAGE()`
+**Purpose:**  
+- Calculate mean values across a defined data range.
+
+**Usage context:**  
+Applied to determine average demand, cost, or performance indicators.
+
+---
+
+### 3. `IFERROR()`
+**Purpose:**  
+- Handle potential errors in formulas gracefully.
+
+**Usage context:**  
+Prevents calculation errors (such as division by zero or missing data) from disrupting the analysis.
+
+---
+
+### 4. Basic arithmetic formulas
+**Purpose:**  
+- Perform direct calculations such as multiplication, division, and subtraction.
+
+**Usage context:**  
+Used to derive performance metrics, ratios, or adjusted values required for supply chain evaluation.
 
 ---
 
 ## 🔁 How to Use the Excel File
 1. Open `SCLM415_NguyenHoangDuy_2232300272.xlsx`.
-2. Go to the `Data` sheet.
-3. Review the raw dataset columns (e.g., item/supplier/time/location).
-4. Check the calculation/output area where `SUMIFS()` is applied.
-5. Update criteria (e.g., supplier name, month, item code) to see how totals change dynamically.
+2. Review the input data provided in the `Data` sheet.
+3. Follow the calculation logic implemented using `SUMIFS()` and other Excel functions.
+4. Observe how conditional aggregation transforms raw data into meaningful results.
+5. Use the outputs to support analysis, discussion, and conclusions for the assignment.
 
 ---
 
 ## 🧠 Key Learning Outcomes
-- Use `SUMIFS()` to perform multi-criteria aggregation for supply chain reporting
-- Produce accurate totals without manual filtering
-- Improve traceability by linking outputs directly to raw data
-- Build reu
+- Apply `SUMIFS()` to perform conditional aggregation in supply chain datasets
+- Translate raw data into actionable insights
+- Improve calculation accuracy without manual filtering
+- Structure Excel-based analysis in a clear and traceable manner
